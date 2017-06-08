@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>PHP Tools</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <center>
+            <textarea placeholder="Content..."></textarea>
+            <select>
+                <option value="0">Select an action...</option>
+                <option value="1">String length (strlen)</option>
+                <option value="2">Convert to UNIX timestamp</option>
+                <option value="3">Convert seconds to HH:MM:SS</option>
+                <option value="4">Count lines</option>
+                <option value="5">UNIX to time (format: day/month/year hour:minute:second)</option>
+            </select>
+            <br>
+            <button type="button" onclick = "calculateResult()">Do it!</button>
+            <div class="result">
+                <p class="title">Result</p> <pre id="result">No result yet...</pre>
+                <p class="time"></p>
+            </div>
+            <div class="copy">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br/>
+                Developed by <a href="http://iRealWorlds.com">iReal Worlds</a>
+            </div>
+        </center>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function calculateResult() {
+            var start = new Date();
+            $("#result").load("process.php", {data: $("textarea").val(), what: $("select").val()});
+            for(var i = 0; i < 5000; i++);
+            $(".time").html("Generated in: <b>" + ((new Date() - start) / 1000) + "</b> seconds");
+        }
+    </script>
+</html>

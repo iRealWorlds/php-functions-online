@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eee;
+}
+textarea {
+    display: block;
+    margin: 1% 0%;
+    width: 80%;
+    padding: 1.5%;
+}
+button {
+    background: #cc3333;
+    border: 1px solid #cc3333;
+    padding: .45% 2.5%;
+    color: white;
+    font-weight: bold;
+    border-radius: 5%;
+    margin: .5%;
+}
+button:hover {
+    background: #CC4545;
+    cursor: pointer;
+}
+select {
+    width: 75%;
+    text-align: center;
+    padding: 1% 1.5%;
+    font-weight: bold;
+    border-radius: 2%;
+}
+select:focus {
+    border: 1px solid indigo;
+}
+#result {
+    display: inline;
+    font-size: 115%;
+}
+.result {
+    display: block;
+    border: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+    border-top: 3.5px solid #cc3333;
+    background: white;
+    width: 40%;
+    margin: 2.5%;
+    position: relative;
+    padding: 3.5% 2.5%;
+}
+.result .title {
+    letter-spacing: 1.5px;
+    color: #cc3333;
+    position: absolute;
+    left: 2.5%;
+    top: 0%;
+    text-transform: uppercase;
+    font-size: 125%;
+}
+.time {
+    position: absolute;
+    right: 1%;
+    bottom: 1%;
+    font-size: 80%;
+    color: grey;
+    font-style: italic;
+}
+::selection {
+    background: #303030;
+    color: white;
+}
+
+.copy {
+    position: absolute;
+    bottom: 5%;
+    left: 35%;
+}
+a {
+    color: indianred;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
